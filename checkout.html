@@ -22,11 +22,11 @@
           <div class="checkout-step">
             <div class="step-title"><span>1</span><div><strong>Informações pessoais</strong><small>Dados para contato e atualização do pedido</small></div></div>
             <div class="form-grid">
-              <label class="full">E-mail<input type="email" required autocomplete="email" placeholder="voce@email.com"></label>
-              <label>Nome<input required autocomplete="given-name" placeholder="Seu nome"></label>
-              <label>Sobrenome<input required autocomplete="family-name" placeholder="Sobrenome"></label>
-              <label>CPF<input required inputmode="numeric" placeholder="000.000.000-00"></label>
-              <label>Celular<input required type="tel" autocomplete="tel" placeholder="(35) 99999-9999"></label>
+              <label class="full">E-mail<input id="checkoutEmail" type="email" required autocomplete="email" placeholder="voce@email.com"></label>
+              <label>Nome<input id="checkoutFirstName" required autocomplete="given-name" placeholder="Seu nome"></label>
+              <label>Sobrenome<input id="checkoutLastName" required autocomplete="family-name" placeholder="Sobrenome"></label>
+              <label>CPF<input id="checkoutCpf" required inputmode="numeric" placeholder="000.000.000-00"></label>
+              <label>Celular<input id="checkoutPhone" required type="tel" autocomplete="tel" placeholder="(35) 99999-9999"></label>
             </div>
           </div>
 
@@ -42,10 +42,11 @@
           <div class="checkout-step">
             <div class="step-title"><span>3</span><div><strong>Pagamento</strong><small>Escolha como deseja pagar</small></div></div>
             <div class="payment-tabs"><button class="active" type="button">Pix</button><button type="button">Cartão</button></div>
-            <div class="payment-mock"><div class="pix-icon">PIX</div><div><strong>Pagamento via Pix</strong><p>Após confirmar o pedido, use o QR Code ou código Pix para pagamento.</p></div></div>
+            <div class="payment-mock"><div class="pix-icon">PIX</div><div><strong>Pagamento combinado pelo WhatsApp</strong><p>A loja receberá seu pedido completo e confirmará pelo WhatsApp a disponibilidade, o frete quando necessário e os dados para pagamento.</p></div></div>
           </div>
 
-          <button class="btn btn-dark full xl" id="fakeFinish">Finalizar pedido</button>
+          <button class="btn btn-dark full xl" id="fakeFinish">Finalizar pelo WhatsApp</button>
+          <small>Ao finalizar, o WhatsApp será aberto com todas as informações do pedido prontas para envio à NM Calçados.</small>
         </section>
 
         <aside class="figma-order-summary order-summary">
@@ -65,5 +66,6 @@
 
   <div class="toast" id="toast"></div>
   <script src="app.js"></script>
+  <script src="checkout-whatsapp.js"></script>
 </body>
 </html>
