@@ -1,0 +1,26 @@
+/* Centralização global do rodapé NM */
+.figma-footer{
+  text-align:center !important;
+}
+
+.figma-footer-row{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  flex-wrap:wrap !important;
+  gap:12px 24px !important;
+  text-align:center !important;
+}
+
+.figma-footer-row > *{
+  text-align:center !important;
+}
+
+@media (max-width:640px){
+  .figma-footer-row{
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:6px !important;
+  }
+}
