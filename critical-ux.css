@@ -1,5 +1,8 @@
 /* NM Calçados — correções críticas de UX */
 
+/* Não exibir ações sem fluxo implementado */
+.figma-header-actions .desktop-only[aria-label="Minha conta"]{display:none!important}
+
 .quick-add:disabled,
 #addCurrentProduct:disabled,
 #fakeFinish:disabled{
