@@ -4,47 +4,62 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Loja — NM Calçados</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="figma-theme.css" />
 </head>
-<body>
-  <div class="topbar">Retire grátis na loja • Atendimento pelo WhatsApp</div>
-  <header class="site-header">
-    <div class="container header-row">
-      <button class="icon-btn mobile-only" id="menuBtn">☰</button>
-      <a class="brand" href="index.html"><span class="brand-mark">NM</span><span class="brand-copy"><strong>Calçados</strong><small>& Cosméticos</small></span></a>
-      <nav class="desktop-nav"><a href="loja.html?cat=novidades">Novidades</a><a href="loja.html?cat=feminino">Feminino</a><a href="loja.html?cat=masculino">Masculino</a><a href="loja.html?cat=infantil">Infantil</a><a href="loja.html?cat=beleza">Beleza</a><a class="sale-link" href="loja.html?cat=ofertas">Ofertas</a></nav>
-      <div class="header-actions"><button class="icon-btn" id="searchBtn">⌕</button><button class="cart-btn" id="cartBtn">🛍 <span id="cartCount">0</span></button></div>
+<body class="figma-shop">
+  <header class="figma-header">
+    <div class="container figma-header-row">
+      <a class="figma-logo" href="index.html" aria-label="NM Calçados"><img src="assets/nm-logo.svg" alt="NM Calçados"></a>
+      <div class="figma-search"><span class="figma-search-icon">⌕</span><input id="globalSearch" type="search" placeholder="Buscar produtos..." aria-label="Buscar produtos"></div>
+      <div class="figma-header-actions">
+        <button class="figma-icon-btn desktop-only" type="button" aria-label="Minha conta">♙</button>
+        <button class="figma-icon-btn figma-cart-trigger" id="cartBtn" type="button" aria-label="Carrinho">🛒<span id="cartCount">0</span></button>
+        <button class="figma-menu-btn mobile-only" id="menuBtn" type="button" aria-label="Abrir menu">☰</button>
+      </div>
     </div>
-    <div class="search-panel" id="searchPanel"><div class="container search-inner"><input id="globalSearch" type="search" placeholder="O que você procura?"><button id="doSearch" class="btn btn-dark">Buscar</button></div></div>
   </header>
-  <div class="mobile-menu" id="mobileMenu"><a href="loja.html?cat=novidades">Novidades</a><a href="loja.html?cat=feminino">Feminino</a><a href="loja.html?cat=masculino">Masculino</a><a href="loja.html?cat=infantil">Infantil</a><a href="loja.html?cat=beleza">Beleza</a><a href="loja.html?cat=ofertas">Ofertas</a></div>
+  <div class="mobile-menu figma-mobile-menu" id="mobileMenu"><a href="loja.html?cat=novidades">Novidades</a><a href="loja.html?cat=feminino">Feminino</a><a href="loja.html?cat=masculino">Masculino</a><a href="loja.html?cat=infantil">Infantil</a><a href="loja.html?cat=beleza">Beleza</a><a href="loja.html?cat=ofertas">Ofertas</a></div>
 
-  <main class="catalog-page">
-    <section class="catalog-hero"><div class="container"><p class="eyebrow">Coleção NM</p><h1 id="catalogTitle">Todos os produtos</h1><p id="catalogSubtitle">Encontre o seu próximo favorito.</p></div></section>
-
-    <section class="section catalog-section">
-      <div class="container">
-        <div class="catalog-toolbar">
-          <button class="filter-toggle" id="filterToggle">☷ Filtros</button>
-          <div class="toolbar-right"><span id="resultCount">0 produtos</span><select id="sortSelect"><option value="featured">Mais relevantes</option><option value="low">Menor preço</option><option value="high">Maior preço</option><option value="new">Novidades</option></select></div>
-        </div>
-        <div class="catalog-layout">
-          <aside class="filters" id="filtersPanel">
-            <div class="filter-group"><strong>Categoria</strong><label><input type="checkbox" value="feminino" class="catFilter"> Feminino</label><label><input type="checkbox" value="masculino" class="catFilter"> Masculino</label><label><input type="checkbox" value="infantil" class="catFilter"> Infantil</label><label><input type="checkbox" value="beleza" class="catFilter"> Beleza</label></div>
-            <div class="filter-group"><strong>Tamanho</strong><div class="size-filter" id="sizeFilter"><button>34</button><button>35</button><button>36</button><button>37</button><button>38</button><button>39</button><button>40</button><button>41</button><button>42</button><button>43</button></div></div>
-            <div class="filter-group"><strong>Faixa de preço</strong><input id="priceRange" type="range" min="50" max="300" value="300"><div class="range-label"><span>R$ 50</span><span id="priceLabel">até R$ 300</span></div></div>
-            <div class="filter-group"><strong>Disponibilidade</strong><label><input type="checkbox" id="inStockOnly"> Somente em estoque</label></div>
-            <button class="btn btn-outline full" id="clearFilters">Limpar filtros</button>
-          </aside>
-          <div class="product-grid catalog-grid" id="catalogProducts"></div>
+  <main class="figma-main container">
+    <aside class="figma-filter-card filters" id="filtersPanel">
+      <div class="figma-filter-head"><h2>Filtros</h2></div>
+      <div class="figma-filter-group">
+        <strong>Categoria</strong>
+        <div class="figma-filter-checkboxes">
+          <label><input type="checkbox" value="feminino" class="catFilter"> Feminino</label>
+          <label><input type="checkbox" value="masculino" class="catFilter"> Masculino</label>
+          <label><input type="checkbox" value="infantil" class="catFilter"> Infantil</label>
+          <label><input type="checkbox" value="beleza" class="catFilter"> Beleza</label>
         </div>
       </div>
+      <div class="figma-filter-group">
+        <label>Tamanho</label>
+        <div class="size-filter figma-size-filter" id="sizeFilter"><button>34</button><button>35</button><button>36</button><button>37</button><button>38</button><button>39</button><button>40</button><button>41</button><button>42</button><button>43</button></div>
+      </div>
+      <div class="figma-filter-group">
+        <label>Faixa de preço</label>
+        <div class="figma-price-copy"><span>R$ 50</span><span id="priceLabel">até R$ 300</span></div>
+        <input id="priceRange" type="range" min="50" max="300" value="300">
+      </div>
+      <label class="figma-stock-check"><input type="checkbox" id="inStockOnly"> Somente em estoque</label>
+      <button class="figma-outline-btn" id="clearFilters">Limpar filtros</button>
+    </aside>
+
+    <section class="figma-products-area">
+      <div class="figma-products-top">
+        <div><p class="figma-kicker">COLEÇÃO NM</p><h1 id="catalogTitle">Todos os produtos</h1><p id="catalogSubtitle">Encontre o seu próximo favorito.</p></div>
+        <div class="figma-products-tools"><button class="filter-toggle" id="filterToggle">☷ Filtros</button><span id="resultCount">0 produtos</span><select id="sortSelect"><option value="featured">Mais relevantes</option><option value="low">Menor preço</option><option value="high">Maior preço</option><option value="new">Novidades</option></select></div>
+      </div>
+      <div class="figma-category-tabs"><a href="loja.html">Todos</a><a href="loja.html?cat=feminino">Feminino</a><a href="loja.html?cat=masculino">Masculino</a><a href="loja.html?cat=infantil">Infantil</a><a href="loja.html?cat=beleza">Beleza</a><a href="loja.html?cat=ofertas">Ofertas</a></div>
+      <div class="product-grid catalog-grid figma-product-grid" id="catalogProducts"></div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container footer-bottom"><span>© 2026 NM Calçados. Protótipo visual.</span><a href="index.html">Voltar para a home</a></div></footer>
+  <footer class="figma-footer"><div class="container figma-footer-row"><span>© 2026 NM Calçados</span><a href="index.html">Voltar para a home</a><a href="https://wa.me/5535998935465" target="_blank" rel="noreferrer">WhatsApp</a></div></footer>
 
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
   <aside class="cart-drawer" id="cartDrawer"><div class="drawer-head"><div><small>Seu carrinho</small><h3>Minha sacola</h3></div><button class="icon-btn" id="closeCart">✕</button></div><div id="cartItems" class="cart-items"></div><div class="cart-empty" id="cartEmpty"><span>🛍</span><h4>Sua sacola está vazia</h4><a class="btn btn-dark" href="loja.html">Explorar produtos</a></div><div class="drawer-footer" id="cartFooter"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div><a class="btn btn-dark full" href="checkout.html">Ir para o checkout</a></div></aside>
