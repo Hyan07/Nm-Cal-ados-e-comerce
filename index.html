@@ -73,15 +73,15 @@
       <div class="nm-benefits">
         <div class="nm-benefit"><span class="nm-benefit-icon">↺</span><div><strong>Troca facilitada</strong><span>Mais tranquilidade para escolher seu tamanho.</span></div></div>
         <div class="nm-benefit"><span class="nm-benefit-icon">⌂</span><div><strong>Retire na loja</strong><span>Compre online e retire em Carmo do Rio Claro.</span></div></div>
-        <div class="nm-benefit"><span class="nm-benefit-icon">◇</span><div><strong>Pagamento prático</strong><span>Pix e cartão preparados para o checkout.</span></div></div>
-        <div class="nm-benefit"><span class="nm-benefit-icon">↗</span><div><strong>Atendimento humano</strong><span>Fale com a NM diretamente pelo WhatsApp.</span></div></div>
+        <div class="nm-benefit"><span class="nm-benefit-icon">◇</span><div><strong>Pagamento prático</strong><span>Pague com Pix ou cartão.</span></div></div>
+        <div class="nm-benefit"><span class="nm-benefit-icon">↗</span><div><strong>Atendimento pelo WhatsApp</strong><span>Tire dúvidas antes de finalizar sua compra.</span></div></div>
       </div>
     </section>
 
     <section class="nm-home-section">
       <div class="nm-section-heading">
-        <div><small>Compre por estilo</small><h2>Encontre o que combina com você</h2><p>Navegue pelas principais categorias da loja sem perder a simplicidade do catálogo.</p></div>
-        <a href="loja.html">Ver catálogo completo →</a>
+        <div><small>Compre por categoria</small><h2>Encontre o que combina com você</h2><p>Escolha uma categoria e encontre seus produtos favoritos.</p></div>
+        <a href="loja.html">Ver todos os produtos →</a>
       </div>
       <div class="nm-category-grid">
         <article class="nm-category-card nm-cat-women"><div class="nm-category-copy"><span>Feminino</span><h3>Leveza e estilo</h3><p>Tênis, sandálias e opções versáteis para a rotina.</p><a href="loja.html?cat=feminino">Comprar feminino</a></div></article>
@@ -92,8 +92,8 @@
 
     <section class="nm-home-section" style="padding-top:0">
       <div class="nm-promo-grid">
-        <article class="nm-promo-card nm-promo-blue"><small>Seleção NM</small><h3>Ofertas que valem a visita</h3><p>Uma área dedicada a produtos selecionados com preço especial, sem poluir a experiência da loja.</p><a href="loja.html?cat=ofertas">Ver ofertas →</a></article>
-        <article class="nm-promo-card nm-promo-light"><small>Loja física + online</small><h3>Compre do seu jeito</h3><p>Escolha pelo site, tire dúvidas no WhatsApp e retire diretamente na loja quando preferir.</p><a href="https://wa.me/5535998935465" target="_blank" rel="noreferrer">Falar no WhatsApp</a></article>
+        <article class="nm-promo-card nm-promo-blue"><small>Ofertas</small><h3>Preços especiais</h3><p>Produtos selecionados com descontos e condições especiais.</p><a href="loja.html?cat=ofertas">Ver ofertas →</a></article>
+        <article class="nm-promo-card nm-promo-light"><small>Retirada na loja</small><h3>Compre online e retire sem frete</h3><p>Faça seu pedido pelo site e escolha a retirada na loja na hora de finalizar a compra.</p><a href="loja.html">Começar a comprar →</a></article>
       </div>
     </section>
 
@@ -101,7 +101,7 @@
       <div class="nm-newsletter-inner">
         <div class="nm-newsletter-badge">✦</div>
         <h2>Receba novidades da NM</h2>
-        <p>Novos produtos, reposições, ofertas e campanhas em um canal direto com quem já acompanha a loja.</p>
+        <p>Cadastre seu e-mail para receber novidades, reposições e ofertas.</p>
         <form id="nmNewsletter"><input type="email" required placeholder="Seu melhor e-mail" aria-label="Seu melhor e-mail"><button type="submit">Quero receber</button></form>
       </div>
     </section>
@@ -111,7 +111,7 @@
     <div class="container nm-footer-inner">
       <img class="nm-footer-logo" src="assets/nm-logo.svg" alt="NM Calçados">
       <div class="nm-footer-links"><a href="loja.html">Todos os produtos</a><a href="loja.html?cat=feminino">Feminino</a><a href="loja.html?cat=masculino">Masculino</a><a href="loja.html?cat=infantil">Infantil</a><a href="loja.html?cat=ofertas">Ofertas</a><a href="https://wa.me/5535998935465" target="_blank" rel="noreferrer">WhatsApp</a></div>
-      <div class="nm-footer-meta"><span>© 2026 NM Calçados</span><span>Carmo do Rio Claro • MG</span><span>Protótipo visual do e-commerce</span></div>
+      <div class="nm-footer-meta"><span>© 2026 NM Calçados</span><span>Carmo do Rio Claro • MG</span></div>
     </div>
   </footer>
 
@@ -152,7 +152,7 @@
 
       document.getElementById('nmNewsletter')?.addEventListener('submit', e => {
         e.preventDefault();
-        toast('Cadastro realizado no protótipo.');
+        toast('Cadastro realizado.');
         e.currentTarget.reset();
       });
     });
