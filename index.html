@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Protótipo visual do e-commerce NM Calçados" />
+  <title>NM Calçados — Moda para o seu dia a dia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">Frete grátis para Carmo do Rio Claro em compras selecionadas • Retire grátis na loja</div>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <button class="icon-btn mobile-only" id="menuBtn" aria-label="Abrir menu">☰</button>
+      <a class="brand" href="index.html" aria-label="NM Calçados">
+        <span class="brand-mark">NM</span>
+        <span class="brand-copy"><strong>Calçados</strong><small>& Cosméticos</small></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Principal">
+        <a href="loja.html?cat=novidades">Novidades</a>
+        <a href="loja.html?cat=feminino">Feminino</a>
+        <a href="loja.html?cat=masculino">Masculino</a>
+        <a href="loja.html?cat=infantil">Infantil</a>
+        <a href="loja.html?cat=beleza">Beleza</a>
+        <a class="sale-link" href="loja.html?cat=ofertas">Ofertas</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Buscar">⌕</button>
+        <button class="icon-btn desktop-only" aria-label="Conta">♡</button>
+        <button class="cart-btn" id="cartBtn" aria-label="Carrinho">🛍 <span id="cartCount">0</span></button>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="container search-inner">
+        <input id="globalSearch" type="search" placeholder="Busque por tênis, sandália, infantil, cosméticos..." />
+        <button id="doSearch" class="btn btn-dark">Buscar</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="loja.html?cat=novidades">Novidades</a>
+    <a href="loja.html?cat=feminino">Feminino</a>
+    <a href="loja.html?cat=masculino">Masculino</a>
+    <a href="loja.html?cat=infantil">Infantil</a>
+    <a href="loja.html?cat=beleza">Beleza</a>
+    <a href="loja.html?cat=ofertas">Ofertas</a>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow light">Nova coleção</p>
+        <h1>Seu estilo começa<br>pelo conforto.</h1>
+        <p>Calçados, beleza e novidades para toda a família — agora em uma experiência de compra feita para você.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="loja.html">Comprar agora</a>
+          <a class="btn btn-ghost-light" href="#categorias">Ver categorias</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container benefits-grid">
+        <div><strong>Retire na loja</strong><span>Compre online e retire sem frete</span></div>
+        <div><strong>Pagamento fácil</strong><span>Pix ou cartão, com parcelamento</span></div>
+        <div><strong>Atendimento humano</strong><span>Fale direto com a NM pelo WhatsApp</span></div>
+        <div><strong>Compra segura</strong><span>Troca simples e acompanhamento do pedido</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="categorias">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Encontre seu estilo</p>
+            <h2>Compre por categoria</h2>
+          </div>
+          <a class="text-link" href="loja.html">Ver tudo →</a>
+        </div>
+        <div class="category-grid">
+          <a class="category-card cat-fem" href="loja.html?cat=feminino"><span>Feminino</span><small>Leveza, tendência e conforto</small></a>
+          <a class="category-card cat-men" href="loja.html?cat=masculino"><span>Masculino</span><small>Versatilidade para todo dia</small></a>
+          <a class="category-card cat-kids" href="loja.html?cat=infantil"><span>Infantil</span><small>Passos leves para brincar</small></a>
+          <a class="category-card cat-beauty" href="loja.html?cat=beleza"><span>Beleza</span><small>Cuidados e novidades</small></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Mais desejados</p><h2>Destaques da semana</h2></div>
+          <div class="carousel-actions"><button class="circle-btn" id="prevFeatured">←</button><button class="circle-btn" id="nextFeatured">→</button></div>
+        </div>
+        <div class="product-strip" id="featuredProducts"></div>
+      </div>
+    </section>
+
+    <section class="split-banner section">
+      <div class="container split-grid">
+        <div class="editorial editorial-main">
+          <div class="editorial-content">
+            <p class="eyebrow light">Seleção NM</p>
+            <h2>Tênis que acompanham sua rotina</h2>
+            <a class="btn btn-light" href="loja.html?cat=tenis">Ver coleção</a>
+          </div>
+        </div>
+        <div class="editorial editorial-sale">
+          <div class="editorial-content dark-copy">
+            <p class="eyebrow">Oferta especial</p>
+            <h2>Até 30% OFF<br>em itens selecionados</h2>
+            <a class="btn btn-dark" href="loja.html?cat=ofertas">Aproveitar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Feito para você</p><h2>Novidades que chegaram</h2></div>
+          <a class="text-link" href="loja.html?cat=novidades">Ver novidades →</a>
+        </div>
+        <div class="product-grid" id="newProducts"></div>
+      </div>
+    </section>
+
+    <section class="store-section">
+      <div class="container store-grid">
+        <div class="store-copy">
+          <p class="eyebrow light">Nossa loja</p>
+          <h2>Do centro de Carmo do Rio Claro para onde você estiver.</h2>
+          <p>Compre pelo site, retire na loja ou fale com nossa equipe para encontrar o tamanho ideal.</p>
+          <div class="store-pills"><span>Rua Camilo Aschar, 41</span><span>Centro • Carmo do Rio Claro/MG</span></div>
+          <a class="btn btn-light" href="https://wa.me/5535998935465" target="_blank" rel="noreferrer">Falar no WhatsApp</a>
+        </div>
+        <div class="store-card">
+          <strong>Atendimento</strong>
+          <p>Segunda a sexta</p><span>09h às 18h</span>
+          <p>Sábado</p><span>09h às 13h</span>
+          <hr>
+          <small>Horários sujeitos a alteração em feriados.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter section">
+      <div class="container newsletter-card">
+        <div><p class="eyebrow">Clube NM</p><h2>Receba novidades e ofertas primeiro.</h2><p>Cadastre seu e-mail para receber lançamentos, cupons e campanhas especiais.</p></div>
+        <form id="newsletterForm"><input type="email" placeholder="Seu melhor e-mail" required><button class="btn btn-dark">Quero receber</button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="index.html"><span class="brand-mark">NM</span><span class="brand-copy"><strong>Calçados</strong><small>& Cosméticos</small></span></a><p>Moda, conforto e preço para toda a família.</p></div>
+      <div><strong>Comprar</strong><a href="loja.html?cat=feminino">Feminino</a><a href="loja.html?cat=masculino">Masculino</a><a href="loja.html?cat=infantil">Infantil</a><a href="loja.html?cat=ofertas">Ofertas</a></div>
+      <div><strong>Atendimento</strong><a href="#">Trocas e devoluções</a><a href="#">Formas de pagamento</a><a href="#">Entregas</a><a href="#">Fale conosco</a></div>
+      <div><strong>NM Calçados</strong><a href="#">Quem somos</a><a href="#">Nossa loja</a><a href="#">Privacidade</a><a href="#">Termos de uso</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 NM Calçados. Protótipo visual.</span><span>Instagram • WhatsApp • Facebook</span></div>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho">
+    <div class="drawer-head"><div><small>Seu carrinho</small><h3>Minha sacola</h3></div><button class="icon-btn" id="closeCart">✕</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-empty" id="cartEmpty"><span>🛍</span><h4>Sua sacola está vazia</h4><p>Adicione alguns produtos para continuar.</p><a class="btn btn-dark" href="loja.html">Explorar produtos</a></div>
+    <div class="drawer-footer" id="cartFooter"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div><small>Frete e descontos calculados no checkout.</small><a class="btn btn-dark full" href="checkout.html">Ir para o checkout</a></div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
