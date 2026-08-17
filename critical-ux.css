@@ -286,3 +286,62 @@
   .nm-benefit{animation:none!important;transition:none!important}
   .nm-benefit-icon,.nm-benefit::before,.nm-benefit::after{transition:none!important}
 }
+
+/* Esteira automática contínua de benefícios */
+.nm-benefits-wrap{
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 4%,#000 96%,transparent 100%);
+  mask-image:linear-gradient(to right,transparent 0,#000 4%,#000 96%,transparent 100%);
+}
+.nm-benefits[data-marquee-ready="true"]{
+  width:max-content!important;
+  max-width:none!important;
+  margin:0!important;
+  display:flex!important;
+  grid-template-columns:none!important;
+  gap:14px!important;
+  padding:2px 0 12px!important;
+  overflow:visible!important;
+  scroll-snap-type:none!important;
+  animation:nmBenefitsMarquee 30s linear infinite!important;
+  will-change:transform;
+}
+.nm-benefits[data-marquee-ready="true"] .nm-benefit{
+  flex:0 0 clamp(260px,22vw,315px)!important;
+  width:clamp(260px,22vw,315px)!important;
+  scroll-snap-align:none!important;
+}
+.nm-benefits-wrap:hover .nm-benefits[data-marquee-ready="true"]{
+  animation-play-state:paused!important;
+}
+@keyframes nmBenefitsMarquee{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(calc(-50% - 7px),0,0)}
+}
+
+@media(max-width:680px){
+  .nm-benefits[data-marquee-ready="true"]{
+    gap:10px!important;
+    padding:2px 0 10px!important;
+    animation-duration:24s!important;
+  }
+  .nm-benefits[data-marquee-ready="true"] .nm-benefit{
+    flex:0 0 min(78vw,300px)!important;
+    width:min(78vw,300px)!important;
+  }
+  @keyframes nmBenefitsMarquee{
+    from{transform:translate3d(0,0,0)}
+    to{transform:translate3d(calc(-50% - 5px),0,0)}
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .nm-benefits[data-marquee-ready="true"]{
+    width:min(1280px,calc(100% - 40px))!important;
+    margin:auto!important;
+    display:grid!important;
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    animation:none!important;
+    transform:none!important;
+  }
+  .nm-benefit-clone{display:none!important}
+}
