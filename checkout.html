@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout — NM Calçados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css" />
+</head>
+<body class="checkout-body">
+  <header class="checkout-header"><div class="container"><a class="brand" href="index.html"><span class="brand-mark">NM</span><span class="brand-copy"><strong>Calçados</strong><small>Checkout seguro</small></span></a><span>🔒 Compra protegida</span></div></header>
+  <main class="checkout-page"><div class="container checkout-grid">
+    <section class="checkout-form">
+      <a class="back-link" href="loja.html">← Continuar comprando</a>
+      <h1>Finalizar compra</h1>
+      <div class="checkout-step"><div class="step-title"><span>1</span><div><strong>Contato</strong><small>Para enviarmos atualizações do pedido</small></div></div><div class="form-grid"><label class="full">E-mail<input type="email" placeholder="voce@email.com"></label><label>Nome<input placeholder="Seu nome"></label><label>Sobrenome<input placeholder="Sobrenome"></label><label>CPF<input placeholder="000.000.000-00"></label><label>Celular<input placeholder="(35) 99999-9999"></label></div></div>
+      <div class="checkout-step"><div class="step-title"><span>2</span><div><strong>Entrega</strong><small>Escolha como quer receber</small></div></div><div class="delivery-options"><label class="delivery-card active"><input type="radio" name="delivery" checked><div><strong>Retirar na loja</strong><small>Rua Camilo Aschar, 41 • Grátis</small></div><b>R$ 0,00</b></label><label class="delivery-card"><input type="radio" name="delivery"><div><strong>Entrega local</strong><small>Carmo do Rio Claro e região</small></div><b>A calcular</b></label><label class="delivery-card"><input type="radio" name="delivery"><div><strong>Envio nacional</strong><small>Correios/transportadora</small></div><b>A calcular</b></label></div></div>
+      <div class="checkout-step"><div class="step-title"><span>3</span><div><strong>Pagamento</strong><small>Protótipo visual — pagamento ainda não conectado</small></div></div><div class="payment-tabs"><button class="active">Pix</button><button>Cartão</button></div><div class="payment-mock"><div class="pix-icon">PIX</div><div><strong>Pagamento via Pix</strong><p>Na versão funcional, o QR Code será gerado após confirmar o pedido.</p></div></div></div>
+      <button class="btn btn-dark full xl" id="fakeFinish">Finalizar pedido</button>
+    </section>
+    <aside class="order-summary"><h2>Resumo do pedido</h2><div id="checkoutItems" class="checkout-items"></div><div class="coupon"><input placeholder="Cupom de desconto"><button>Aplicar</button></div><div class="summary-lines"><div><span>Subtotal</span><strong id="checkoutSubtotal">R$ 0,00</strong></div><div><span>Frete</span><strong>Grátis</strong></div><div class="summary-total"><span>Total</span><strong id="checkoutTotal">R$ 0,00</strong></div></div><small>Ao finalizar, você concorda com os termos e a política de privacidade da loja.</small></aside>
+  </div></main>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
