@@ -10,8 +10,10 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="figma-theme.css" />
   <link rel="stylesheet" href="footer-center.css" />
+  <link rel="stylesheet" href="brand-enhancements.css" />
 </head>
 <body class="figma-shop">
+  <div class="nm-utility-bar"><span><b>Retire grátis na loja</b><span class="nm-utility-dot">•</span>Pix e cartão<span class="nm-utility-dot">•</span><span class="nm-hide-mobile">Atendimento pelo WhatsApp</span></span></div>
   <header class="figma-header">
     <div class="container figma-header-row">
       <a class="figma-logo" href="index.html" aria-label="NM Calçados"><img src="assets/nm-logo.svg" alt="NM Calçados"></a>
@@ -37,15 +39,8 @@
           <label><input type="checkbox" value="beleza" class="catFilter"> Beleza</label>
         </div>
       </div>
-      <div class="figma-filter-group">
-        <label>Tamanho</label>
-        <div class="size-filter figma-size-filter" id="sizeFilter"><button>34</button><button>35</button><button>36</button><button>37</button><button>38</button><button>39</button><button>40</button><button>41</button><button>42</button><button>43</button></div>
-      </div>
-      <div class="figma-filter-group">
-        <label>Faixa de preço</label>
-        <div class="figma-price-copy"><span>R$ 50</span><span id="priceLabel">até R$ 300</span></div>
-        <input id="priceRange" type="range" min="50" max="300" value="300">
-      </div>
+      <div class="figma-filter-group"><label>Tamanho</label><div class="size-filter figma-size-filter" id="sizeFilter"><button>34</button><button>35</button><button>36</button><button>37</button><button>38</button><button>39</button><button>40</button><button>41</button><button>42</button><button>43</button></div></div>
+      <div class="figma-filter-group"><label>Faixa de preço</label><div class="figma-price-copy"><span>R$ 50</span><span id="priceLabel">até R$ 300</span></div><input id="priceRange" type="range" min="50" max="300" value="300"></div>
       <label class="figma-stock-check"><input type="checkbox" id="inStockOnly"> Somente em estoque</label>
       <button class="figma-outline-btn" id="clearFilters">Limpar filtros</button>
     </aside>
