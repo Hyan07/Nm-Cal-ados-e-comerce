@@ -6,49 +6,25 @@
   <title>Produto — NM Calçados</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="figma-theme.css" />
 </head>
-<body>
-  <div class="topbar">Retire grátis na loja • Troca facilitada</div>
-
-  <header class="site-header">
-    <div class="container header-row">
-      <button class="icon-btn mobile-only" id="menuBtn" aria-label="Abrir menu">☰</button>
-      <a class="brand" href="index.html" aria-label="NM Calçados">
-        <span class="brand-mark">NM</span>
-        <span class="brand-copy"><strong>Calçados</strong><small>& Cosméticos</small></span>
-      </a>
-      <nav class="desktop-nav" aria-label="Principal">
-        <a href="loja.html">Loja</a>
-        <a href="loja.html?cat=feminino">Feminino</a>
-        <a href="loja.html?cat=masculino">Masculino</a>
-        <a href="loja.html?cat=infantil">Infantil</a>
-        <a class="sale-link" href="loja.html?cat=ofertas">Ofertas</a>
-      </nav>
-      <div class="header-actions">
-        <button class="cart-btn" id="cartBtn" aria-label="Carrinho">🛍 <span id="cartCount">0</span></button>
-      </div>
+<body class="figma-shop figma-product-page">
+  <header class="figma-header">
+    <div class="container figma-header-row">
+      <a class="figma-logo" href="index.html" aria-label="NM Calçados"><img src="assets/nm-logo.svg" alt="NM Calçados"></a>
+      <div class="figma-search"><span class="figma-search-icon">⌕</span><input id="globalSearch" type="search" placeholder="Buscar produtos..." aria-label="Buscar produtos"></div>
+      <div class="figma-header-actions"><button class="figma-icon-btn desktop-only" type="button" aria-label="Minha conta">♙</button><button class="figma-icon-btn figma-cart-trigger" id="cartBtn" type="button" aria-label="Carrinho">🛒<span id="cartCount">0</span></button><button class="figma-menu-btn mobile-only" id="menuBtn" type="button" aria-label="Abrir menu">☰</button></div>
     </div>
   </header>
+  <div class="mobile-menu figma-mobile-menu" id="mobileMenu"><a href="loja.html">Todos</a><a href="loja.html?cat=feminino">Feminino</a><a href="loja.html?cat=masculino">Masculino</a><a href="loja.html?cat=infantil">Infantil</a><a href="loja.html?cat=beleza">Beleza</a><a href="loja.html?cat=ofertas">Ofertas</a></div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="loja.html">Todos os produtos</a>
-    <a href="loja.html?cat=feminino">Feminino</a>
-    <a href="loja.html?cat=masculino">Masculino</a>
-    <a href="loja.html?cat=infantil">Infantil</a>
-    <a href="loja.html?cat=beleza">Beleza</a>
-    <a href="loja.html?cat=ofertas">Ofertas</a>
-  </div>
+  <main>
+    <div class="container figma-breadcrumb"><a href="index.html">Home</a><span>›</span><a href="loja.html">Loja</a><span>›</span><span id="crumbName">Produto</span></div>
 
-  <main class="product-page">
-    <div class="container breadcrumb"><a href="index.html">Home</a><span>›</span><a href="loja.html">Loja</a><span>›</span><span id="crumbName">Produto</span></div>
-
-    <section class="container product-detail">
-      <div class="gallery">
-        <div class="gallery-main"><img id="productMainImage" alt="Produto NM"></div>
-        <div class="gallery-thumbs" id="productThumbs"></div>
-      </div>
+    <section class="container figma-detail-card">
+      <div class="gallery"><div class="gallery-main"><img id="productMainImage" alt="Produto NM"></div><div class="gallery-thumbs" id="productThumbs"></div></div>
       <div class="product-info">
         <p class="product-brand" id="productBrand">NM Seleção</p>
         <h1 id="productName">Produto</h1>
@@ -58,22 +34,19 @@
         <div class="sizes"><div class="option-title"><strong>Escolha seu tamanho</strong><button class="link-button">Guia de medidas</button></div><div class="size-grid" id="productSizes"></div></div>
         <button class="btn btn-dark full xl" id="addCurrentProduct">Adicionar à sacola</button>
         <a class="btn btn-whatsapp full" id="whatsProduct" target="_blank" rel="noreferrer">Comprar pelo WhatsApp</a>
-        <div class="shipping-box"><strong>Calcule entrega ou retirada</strong><div><input placeholder="Digite seu CEP"><button class="btn btn-outline">Calcular</button></div><small>Ou retire grátis na loja da Rua Camilo Aschar, 41.</small></div>
-        <div class="accordion"><details open><summary>Descrição</summary><p id="productDescription"></p></details><details><summary>Trocas e devoluções</summary><p>Troca facilitada conforme a política da loja e legislação aplicável.</p></details><details><summary>Pagamento</summary><p>Pix e cartão. Condições finais serão configuradas na etapa funcional do projeto.</p></details></div>
+        <div class="shipping-box"><strong>Calcule entrega ou retirada</strong><div><input placeholder="Digite seu CEP"><button class="btn btn-outline">Calcular</button></div><small>Retirada grátis disponível na loja física.</small></div>
+        <div class="accordion"><details open><summary>Descrição</summary><p id="productDescription"></p></details><details><summary>Trocas e devoluções</summary><p>Troca facilitada conforme a política da loja e legislação aplicável.</p></details><details><summary>Pagamento</summary><p>Pix e cartão. Condições finais serão configuradas na etapa funcional.</p></details></div>
       </div>
     </section>
 
-    <section class="section section-soft"><div class="container"><div class="section-head"><div><p class="eyebrow">Você também pode gostar</p><h2>Combine com seu estilo</h2></div></div><div class="product-grid" id="relatedProducts"></div></div></section>
+    <section class="figma-related"><div class="container"><div class="figma-related-head"><div><p>Você também pode gostar</p><h2>Produtos relacionados</h2></div><a href="loja.html">Ver todos →</a></div><div class="product-grid figma-product-grid" id="relatedProducts"></div></div></section>
   </main>
 
-  <div class="drawer-backdrop" id="drawerBackdrop"></div>
-  <aside class="cart-drawer" id="cartDrawer">
-    <div class="drawer-head"><div><small>Seu carrinho</small><h3>Minha sacola</h3></div><button class="icon-btn" id="closeCart" aria-label="Fechar carrinho">✕</button></div>
-    <div id="cartItems" class="cart-items"></div>
-    <div class="cart-empty" id="cartEmpty"><span>🛍</span><h4>Sua sacola está vazia</h4></div>
-    <div class="drawer-footer" id="cartFooter"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div><a class="btn btn-dark full" href="checkout.html">Ir para o checkout</a></div>
-  </aside>
+  <footer class="figma-footer"><div class="container figma-footer-row"><span>© 2026 NM Calçados</span><a href="loja.html">Continuar comprando</a><a href="https://wa.me/5535998935465" target="_blank" rel="noreferrer">WhatsApp</a></div></footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div><aside class="cart-drawer" id="cartDrawer"><div class="drawer-head"><div><small>Seu carrinho</small><h3>Minha sacola</h3></div><button class="icon-btn" id="closeCart">✕</button></div><div id="cartItems" class="cart-items"></div><div class="cart-empty" id="cartEmpty"><span>🛍</span><h4>Sua sacola está vazia</h4></div><div class="drawer-footer" id="cartFooter"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div><a class="btn btn-dark full" href="checkout.html">Ir para o checkout</a></div></aside>
   <div class="toast" id="toast"></div>
   <script src="app.js"></script>
+  <script>document.getElementById('globalSearch')?.addEventListener('keydown',e=>{const v=e.currentTarget.value.trim();if(e.key==='Enter'&&v)location.href=`loja.html?q=${encodeURIComponent(v)}`})</script>
 </body>
 </html>
