@@ -345,3 +345,66 @@
   }
   .nm-benefit-clone{display:none!important}
 }
+
+/* CTAs principais do carrinho e checkout */
+.drawer-footer a[href="checkout.html"]{
+  min-height:46px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border:1px solid var(--nm-blue,#0f216b)!important;
+  border-radius:8px!important;
+  background:var(--nm-blue,#0f216b)!important;
+  color:#fff!important;
+  box-shadow:0 8px 18px rgba(15,33,107,.18)!important;
+  font-size:0!important;
+  font-weight:700!important;
+  letter-spacing:0!important;
+  transition:background .18s ease,transform .18s ease,box-shadow .18s ease!important;
+}
+.drawer-footer a[href="checkout.html"]::after{
+  content:"Finalizar compra";
+  font-size:12px;
+  line-height:1;
+}
+.drawer-footer a[href="checkout.html"]:hover{
+  background:#172d7f!important;
+  border-color:#172d7f!important;
+  transform:translateY(-1px)!important;
+  box-shadow:0 10px 22px rgba(15,33,107,.24)!important;
+}
+
+.figma-checkout-title>a[href="loja.html"]{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:max-content!important;
+  min-height:40px!important;
+  padding:0 15px!important;
+  border:1px solid var(--nm-blue,#0f216b)!important;
+  border-radius:8px!important;
+  background:var(--nm-blue,#0f216b)!important;
+  color:#fff!important;
+  font-size:11px!important;
+  font-weight:700!important;
+  line-height:1!important;
+  text-decoration:none!important;
+  box-shadow:0 7px 16px rgba(15,33,107,.16)!important;
+  transition:background .18s ease,transform .18s ease,box-shadow .18s ease!important;
+}
+.figma-checkout-title>a[href="loja.html"]:hover{
+  background:#172d7f!important;
+  border-color:#172d7f!important;
+  color:#fff!important;
+  transform:translateY(-1px)!important;
+  box-shadow:0 9px 20px rgba(15,33,107,.22)!important;
+}
+
+@media(max-width:680px){
+  .drawer-footer a[href="checkout.html"]{min-height:48px!important}
+  .figma-checkout-title>a[href="loja.html"]{
+    min-height:38px!important;
+    padding:0 13px!important;
+    font-size:10px!important;
+  }
+}
