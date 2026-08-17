@@ -1,0 +1,110 @@
+/* NM Calçados — correções críticas de UX */
+
+.quick-add:disabled,
+#addCurrentProduct:disabled,
+#fakeFinish:disabled{
+  opacity:.48!important;
+  cursor:not-allowed!important;
+  transform:none!important;
+  box-shadow:none!important;
+}
+
+.product-card.is-unavailable .product-image img{
+  filter:grayscale(.28);
+  opacity:.78;
+}
+.product-card.is-unavailable .quick-add{
+  background:#e5e7eb!important;
+  color:#6b7280!important;
+}
+
+.size-helper{
+  margin:-8px 0 12px;
+  color:#9b2c2c;
+  font-size:10px;
+  line-height:1.4;
+}
+.size-helper.is-selected{color:#166534}
+.single-size{
+  display:inline-flex;
+  align-items:center;
+  min-height:36px;
+  padding:0 12px;
+  margin-bottom:14px;
+  border:1px solid #d1d5db;
+  border-radius:6px;
+  background:#f9fafb;
+  color:#4b5563;
+  font-size:11px;
+  font-weight:600;
+}
+
+.cart-row-info{min-width:0}
+.cart-qty{
+  display:inline-flex;
+  align-items:center;
+  gap:0;
+  margin:7px 0 5px;
+  border:1px solid #e5e7eb;
+  border-radius:6px;
+  overflow:hidden;
+  background:#fff;
+}
+.cart-qty button{
+  width:28px;
+  height:26px;
+  border:0!important;
+  background:#f8fafc!important;
+  color:#111827!important;
+  cursor:pointer;
+  font-size:14px!important;
+  line-height:1;
+}
+.cart-qty button:hover{background:#eef2ff!important;color:#0f216b!important}
+.cart-qty span{
+  min-width:30px;
+  text-align:center;
+  font-size:10px;
+  font-weight:700;
+}
+.cart-remove{
+  align-self:start;
+  padding:5px 0!important;
+  color:#8b3f30!important;
+  font-size:9px!important;
+}
+
+.empty-results{
+  grid-column:1/-1;
+  padding:68px 20px;
+  text-align:center;
+  border:1px dashed #dbe1ea;
+  border-radius:10px;
+  background:#fbfcfe;
+}
+.empty-results h3{margin:0 0 6px;font-size:15px}
+.empty-results p{margin:0;color:#6b7280;font-size:11px}
+
+.checkout-empty{
+  display:grid;
+  gap:8px;
+  padding:24px 10px;
+  text-align:center;
+  color:#6b7280;
+}
+.checkout-empty strong{color:#111827;font-size:12px}
+.checkout-empty a{color:#0f216b;font-size:10px;font-weight:700}
+
+.figma-checkout-panel input:required:focus:invalid{
+  border-color:#d97706!important;
+  box-shadow:0 0 0 3px rgba(217,119,6,.08)!important;
+}
+.figma-checkout-panel input:required:valid{
+  border-color:#b7d4c0!important;
+}
+
+@media(max-width:680px){
+  .cart-qty button{width:30px;height:28px}
+  .cart-qty span{min-width:32px}
+  .size-helper{font-size:9px}
+}
