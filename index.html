@@ -9,110 +9,62 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="figma-theme.css" />
 </head>
 <body class="figma-shop">
   <header class="figma-header">
     <div class="container figma-header-row">
-      <a class="figma-logo" href="index.html" aria-label="NM Calçados">
-        <img src="assets/nm-logo.svg" alt="NM Calçados">
-      </a>
-
-      <div class="figma-search">
-        <span class="figma-search-icon">⌕</span>
-        <input id="globalSearch" type="search" placeholder="Buscar produtos..." aria-label="Buscar produtos">
-      </div>
-
+      <a class="figma-logo" href="index.html" aria-label="NM Calçados"><img src="assets/nm-logo.svg" alt="NM Calçados"></a>
+      <div class="figma-search"><span class="figma-search-icon">⌕</span><input id="globalSearch" type="search" placeholder="Buscar produtos..." aria-label="Buscar produtos"></div>
       <div class="figma-header-actions">
         <button class="figma-icon-btn desktop-only" type="button" aria-label="Minha conta">♙</button>
-        <button class="figma-icon-btn figma-cart-trigger" id="cartBtn" type="button" aria-label="Carrinho">
-          🛒
-          <span id="cartCount">0</span>
-        </button>
+        <button class="figma-icon-btn figma-cart-trigger" id="cartBtn" type="button" aria-label="Carrinho">🛒<span id="cartCount">0</span></button>
         <button class="figma-menu-btn mobile-only" id="menuBtn" type="button" aria-label="Abrir menu">☰</button>
       </div>
     </div>
   </header>
 
   <div class="mobile-menu figma-mobile-menu" id="mobileMenu">
-    <a href="loja.html?cat=novidades">Novidades</a>
-    <a href="loja.html?cat=feminino">Feminino</a>
-    <a href="loja.html?cat=masculino">Masculino</a>
-    <a href="loja.html?cat=infantil">Infantil</a>
-    <a href="loja.html?cat=beleza">Beleza</a>
-    <a href="loja.html?cat=ofertas">Ofertas</a>
+    <a href="loja.html?cat=novidades">Novidades</a><a href="loja.html?cat=feminino">Feminino</a><a href="loja.html?cat=masculino">Masculino</a><a href="loja.html?cat=infantil">Infantil</a><a href="loja.html?cat=beleza">Beleza</a><a href="loja.html?cat=ofertas">Ofertas</a>
   </div>
 
   <main class="figma-main container">
     <aside class="figma-filter-card filters" id="filtersPanel">
-      <div class="figma-filter-head">
-        <h2>Filtros</h2>
-      </div>
-
+      <div class="figma-filter-head"><h2>Filtros</h2></div>
       <div class="figma-filter-group">
         <label for="homeCategory">Categoria</label>
-        <select id="homeCategory">
-          <option value="">Todos</option>
-          <option value="feminino">Feminino</option>
-          <option value="masculino">Masculino</option>
-          <option value="infantil">Infantil</option>
-          <option value="beleza">Beleza</option>
-        </select>
+        <select id="homeCategory"><option value="">Todos</option><option value="feminino">Feminino</option><option value="masculino">Masculino</option><option value="infantil">Infantil</option><option value="beleza">Beleza</option></select>
       </div>
-
       <div class="figma-filter-group">
         <label>Faixa de preço</label>
         <div class="figma-price-copy"><span>R$ 50</span><span id="priceLabel">até R$ 300</span></div>
         <input id="priceRange" type="range" min="50" max="300" value="300">
       </div>
-
       <div class="figma-filter-group">
         <label>Tamanho</label>
-        <div class="size-filter figma-size-filter" id="sizeFilter">
-          <button type="button">34</button><button type="button">35</button><button type="button">36</button><button type="button">37</button><button type="button">38</button><button type="button">39</button><button type="button">40</button><button type="button">41</button><button type="button">42</button><button type="button">43</button>
-        </div>
+        <div class="size-filter figma-size-filter" id="sizeFilter"><button type="button">34</button><button type="button">35</button><button type="button">36</button><button type="button">37</button><button type="button">38</button><button type="button">39</button><button type="button">40</button><button type="button">41</button><button type="button">42</button><button type="button">43</button></div>
       </div>
-
       <label class="figma-stock-check"><input type="checkbox" id="inStockOnly"> Somente em estoque</label>
       <button class="figma-outline-btn" id="clearFilters" type="button">Limpar filtros</button>
     </aside>
 
     <section class="figma-products-area">
       <div class="figma-products-top">
-        <div>
-          <p class="figma-kicker">NM CALÇADOS</p>
-          <h1>Encontre seu próximo par</h1>
-        </div>
+        <div><p class="figma-kicker">NM CALÇADOS</p><h1>Encontre seu próximo par</h1></div>
         <div class="figma-products-tools">
           <button class="filter-toggle" id="filterToggle" type="button">☷ Filtros</button>
           <span id="resultCount">0 produtos</span>
-          <select id="sortSelect">
-            <option value="featured">Mais relevantes</option>
-            <option value="low">Menor preço</option>
-            <option value="high">Maior preço</option>
-            <option value="new">Novidades</option>
-          </select>
+          <select id="sortSelect"><option value="featured">Mais relevantes</option><option value="low">Menor preço</option><option value="high">Maior preço</option><option value="new">Novidades</option></select>
         </div>
       </div>
-
       <div class="figma-category-tabs" aria-label="Categorias rápidas">
-        <a href="index.html">Todos</a>
-        <a href="loja.html?cat=feminino">Feminino</a>
-        <a href="loja.html?cat=masculino">Masculino</a>
-        <a href="loja.html?cat=infantil">Infantil</a>
-        <a href="loja.html?cat=ofertas">Ofertas</a>
+        <a class="active" href="index.html">Todos</a><a href="loja.html?cat=feminino">Feminino</a><a href="loja.html?cat=masculino">Masculino</a><a href="loja.html?cat=infantil">Infantil</a><a href="loja.html?cat=ofertas">Ofertas</a>
       </div>
-
       <div class="product-grid catalog-grid figma-product-grid" id="catalogProducts"></div>
     </section>
   </main>
 
-  <footer class="figma-footer">
-    <div class="container figma-footer-row">
-      <span>© 2026 NM Calçados</span>
-      <span>Carmo do Rio Claro • MG</span>
-      <a href="https://wa.me/5535998935465" target="_blank" rel="noreferrer">WhatsApp</a>
-    </div>
-  </footer>
+  <footer class="figma-footer"><div class="container figma-footer-row"><span>© 2026 NM Calçados</span><span>Carmo do Rio Claro • MG</span><a href="https://wa.me/5535998935465" target="_blank" rel="noreferrer">WhatsApp</a></div></footer>
 
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
   <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho">
@@ -127,15 +79,9 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const category = document.getElementById('homeCategory');
-      const catChecks = [...document.querySelectorAll('.catFilter')];
-      category?.addEventListener('change', () => {
-        const value = category.value;
-        if (value) location.href = `loja.html?cat=${encodeURIComponent(value)}`;
-      });
+      category?.addEventListener('change', () => { if (category.value) location.href = `loja.html?cat=${encodeURIComponent(category.value)}`; });
       const search = document.getElementById('globalSearch');
-      search?.addEventListener('keydown', e => {
-        if (e.key === 'Enter' && search.value.trim()) location.href = `loja.html?q=${encodeURIComponent(search.value.trim())}`;
-      });
+      search?.addEventListener('keydown', e => { if (e.key === 'Enter' && search.value.trim()) location.href = `loja.html?q=${encodeURIComponent(search.value.trim())}`; });
     });
   </script>
 </body>
