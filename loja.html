@@ -66,5 +66,26 @@
   <aside class="cart-drawer" id="cartDrawer"><div class="drawer-head"><div><small>Seu carrinho</small><h3>Minha sacola</h3></div><button class="icon-btn" id="closeCart">✕</button></div><div id="cartItems" class="cart-items"></div><div class="cart-empty" id="cartEmpty"><span>🛍</span><h4>Sua sacola está vazia</h4><a class="btn btn-dark" href="loja.html">Explorar produtos</a></div><div class="drawer-footer" id="cartFooter"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div><a class="btn btn-dark full" href="checkout.html">Ir para o checkout</a></div></aside>
   <div class="toast" id="toast"></div>
   <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const main = document.querySelector('.figma-main');
+      const panel = document.getElementById('filtersPanel');
+      const productsArea = document.querySelector('.figma-products-area');
+      const productsTop = document.querySelector('.figma-products-top');
+      const syncFilterPlacement = () => {
+        if (!main || !panel || !productsArea || !productsTop) return;
+        if (window.matchMedia('(max-width: 900px)').matches) {
+          productsTop.insertAdjacentElement('afterend', panel);
+          panel.style.marginBottom = '18px';
+        } else {
+          main.insertBefore(panel, productsArea);
+          panel.style.marginBottom = '';
+          panel.classList.remove('open');
+        }
+      };
+      syncFilterPlacement();
+      window.addEventListener('resize', syncFilterPlacement);
+    });
+  </script>
 </body>
 </html>
