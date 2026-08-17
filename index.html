@@ -83,6 +83,24 @@
       category?.addEventListener('change', () => { if (category.value) location.href = `loja.html?cat=${encodeURIComponent(category.value)}`; });
       const search = document.getElementById('globalSearch');
       search?.addEventListener('keydown', e => { if (e.key === 'Enter' && search.value.trim()) location.href = `loja.html?q=${encodeURIComponent(search.value.trim())}`; });
+
+      const main = document.querySelector('.figma-main');
+      const panel = document.getElementById('filtersPanel');
+      const productsArea = document.querySelector('.figma-products-area');
+      const productsTop = document.querySelector('.figma-products-top');
+      const syncFilterPlacement = () => {
+        if (!main || !panel || !productsArea || !productsTop) return;
+        if (window.matchMedia('(max-width: 900px)').matches) {
+          productsTop.insertAdjacentElement('afterend', panel);
+          panel.style.marginBottom = '18px';
+        } else {
+          main.insertBefore(panel, productsArea);
+          panel.style.marginBottom = '';
+          panel.classList.remove('open');
+        }
+      };
+      syncFilterPlacement();
+      window.addEventListener('resize', syncFilterPlacement);
     });
   </script>
 </body>
